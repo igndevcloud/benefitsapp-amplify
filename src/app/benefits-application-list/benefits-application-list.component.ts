@@ -6,9 +6,11 @@ import{FormsModule} from '@angular/forms'
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 @Component({
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   selector: 'app-benefits-application-list',
   templateUrl: './benefits-application-list.component.html',
-  styleUrls: ['./benefits-application-list.component.css']
+  styleUrls: ['./benefits-application-list.component.css'],
 })
 export class BenefitsApplicationListComponent {
 

@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
 
 
 @Component({
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   selector: 'app-add-benefits-application',
   templateUrl: './add-benefits-application.component.html',
   styleUrls: ['./add-benefits-application.component.css']
