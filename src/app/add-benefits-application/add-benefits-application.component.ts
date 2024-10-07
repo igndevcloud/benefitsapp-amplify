@@ -9,8 +9,6 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-add-benefits-application',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './add-benefits-application.component.html',
   styleUrls: ['./add-benefits-application.component.css']
 })

@@ -7,8 +7,6 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-benefits-application-list',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './benefits-application-list.component.html',
   styleUrls: ['./benefits-application-list.component.css']
 })
