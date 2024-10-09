@@ -27,6 +27,7 @@ export const auth = defineAuth({
         'https://main.d3dicbp24kdxbr.amplifyapp.com/profile'
       ],
       logoutUrls: ['http://localhost:3000/', 'https://main.d3dicbp24kdxbr.amplifyapp.com/'],
-    }
+    },
+    email: true
   }
 });
