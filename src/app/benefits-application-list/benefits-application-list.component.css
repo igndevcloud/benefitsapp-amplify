@@ -17,3 +17,28 @@ input{
   border: 1px solid #ffffff;
   box-shadow: 10 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.float-parent-element {
+  width: 100%;
+}
+.float-child-element {
+  float: left;
+  width: 50%;
+}
+
+.float-child-element-right {
+  float: right;
+  align-items:end;
+  width: 25%;
+}
+
+.red {
+  background-color: red;
+  margin-left: 50%;
+  height: 100px;
+}
+.yellow {
+  margin-left: 50%;
+  height: 100px;
+  background-color: yellow;
+}

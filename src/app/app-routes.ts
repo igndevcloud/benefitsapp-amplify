@@ -7,6 +7,6 @@ export const routes: Routes = [
   {path:"show-all-benefits-applications",component: BenefitsApplicationListComponent},
   {path:"add-benefits-application", component: AddBenefitsApplicationComponent},
   {path:"update-benefits-application", component: UpdateBenefitsApplicationComponent},
-
+  {path:"home", component: BenefitsApplicationListComponent },
   {path:'', redirectTo: "home", pathMatch:"full"},
 ];
