@@ -1,3 +1,4 @@
+import { AuthenticatorService } from '@aws-amplify/ui-angular';
 import { Component } from '@angular/core';
 import { BenefitsApplication } from '../benefits-application';
 import { Observable } from 'rxjs';
@@ -5,7 +6,6 @@ import { BenefitsApplicationService } from '../benefits-application.service';
 import { Router } from '@angular/router';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
 
 @Component({
   standalone: true,
@@ -19,10 +19,11 @@ export class AddBenefitsApplicationComponent //implements OnInit//
 
   constructor(
     private benefitsApplicationService: BenefitsApplicationService,
+    public authenticator: AuthenticatorService,
     private router: Router,
 
   ) {
-
+    this.benefitsApplication.email = authenticator.username;
   }
 
   submitform!: NgForm;

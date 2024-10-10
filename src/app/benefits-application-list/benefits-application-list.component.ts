@@ -5,6 +5,7 @@ import{FormsModule} from '@angular/forms'
 import { MatTableModule } from '@angular/material/table'
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthenticatorService } from '@aws-amplify/ui-angular';
 
 @Component({
   standalone: true,
@@ -19,7 +20,9 @@ export class BenefitsApplicationListComponent {
   EnteredID!:number;
   displayedColumns: string[] = ['id', 'fname', 'lname', 'email', 'address', 'city', 'approval'];
 
-  constructor(private benefitsApplicationService: BenefitsApplicationService,  private router: Router) {
+  constructor(private benefitsApplicationService: BenefitsApplicationService,
+    public authenticator: AuthenticatorService,
+    private router: Router) {
     this.benefitsApplications=[];
    }
 
@@ -33,7 +36,8 @@ export class BenefitsApplicationListComponent {
   }
 
   getBenefitsApplications(){
-    this.benefitsApplicationService.getBenefitsApplicationsList().subscribe(data => {this.benefitsApplications = data;});
+    console.log(this.authenticator);
+    this.benefitsApplicationService.getBenefitsApplicationsList(this.authenticator.username).subscribe(data => {this.benefitsApplications = data;});
   }
 
   updateBenefitsApplication(id: number){

@@ -14,8 +14,8 @@ export class BenefitsApplicationService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getBenefitsApplicationsList(): Observable<BenefitsApplication[]>{
-    return this.httpClient.get<BenefitsApplication[]>(`${this.baseURL}/getbyUser/inarchet@amazon.com`);
+  getBenefitsApplicationsList(emailid: string): Observable<BenefitsApplication[]>{
+    return this.httpClient.get<BenefitsApplication[]>(`${this.baseURL}/getbyUser/${emailid}`);
   }
 
   addBenefitsApplication(benefitsApplication: BenefitsApplication): Observable<Object>{
